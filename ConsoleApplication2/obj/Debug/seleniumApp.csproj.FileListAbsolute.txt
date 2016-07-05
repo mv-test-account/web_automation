@@ -1,0 +1,10 @@
+C:\selenium\web_automation\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+C:\selenium\web_automation\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+C:\selenium\web_automation\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+C:\selenium\web_automation\ConsoleApplication2\bin\Debug\Automation.Framework.WebDriver.dll
+C:\selenium\web_automation\ConsoleApplication2\bin\Debug\WebDriver.dll
+C:\selenium\web_automation\ConsoleApplication2\bin\Debug\Automation.Framework.WebDriver.pdb
+C:\selenium\web_automation\ConsoleApplication2\bin\Debug\Automation.Framework.WebDriver.xml
+C:\selenium\web_automation\ConsoleApplication2\bin\Debug\WebDriver.xml
+C:\selenium\web_automation\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+C:\selenium\web_automation\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
