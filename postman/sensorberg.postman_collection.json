@@ -1,0 +1,251 @@
+{
+	"variables": [],
+	"info": {
+		"name": "test",
+		"_postman_id": "2a1753fd-8aac-aed5-2920-a79c224db5a6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://connect.sensorberg.com/api/token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar jsonData = JSON.parse(responseBody);\npostman.setGlobalVariable(\"X-Auth-Token\", jsonData.token);"
+					}
+				}
+			],
+			"request": {
+				"url": "https://connect.sensorberg.com/api/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "venosmichal@gmail.com",
+						"description": ""
+					},
+					{
+						"key": "password",
+						"value": "Password1",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "venosmichal@gmail.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "Password1",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"name": "token",
+					"originalRequest": {
+						"url": "https://connect.sensorberg.com/api/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "venosmichal@gmail.com",
+								"enabled": true,
+								"warning": ""
+							},
+							{
+								"key": "password",
+								"value": "Password1",
+								"type": "text",
+								"enabled": true,
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "venosmichal@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "Password1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Access-Control-Allow-Headers",
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,Content-Type,Accept,Authorization,Cache-Control,X-Auth-Token",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "Access-Control-Allow-Methods",
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,POST,PUT,DELETE,OPTIONS,HEAD",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "87",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 05 Jul 2016 19:50:06 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.6 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Strict-Transport-Security",
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubdomains",
+							"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+						}
+					],
+					"cookie": [],
+					"responseTime": 241,
+					"body": "{\"token\":\"0afbdae4925c3ea3cfa2df95472939782b3aacd3cf2d2b04a6aef27952dc7e79\"}"
+				}
+			]
+		},
+		{
+			"name": "https://connect.sensorberg.com/api/beacons",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://connect.sensorberg.com/api/beacons",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{X-Auth-Token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "venosmichal@gmail.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "Password1",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://connect.sensorberg.com/api/applications",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "\n\ntests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://connect.sensorberg.com/api/applications",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{X-Auth-Token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "venosmichal@gmail.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "Password1",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
